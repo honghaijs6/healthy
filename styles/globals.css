@@ -1,26 +1,157 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Noto-san, Ubuntu, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #fff;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-size: 14px !important;
+}
+
+/************* COLOR ********************/
+:root {
+    --light: #fff;
+    --dark: #2e2e2e;
+    --dark-light: #414141;
+    --gray: #777777;
+    --yellow: #ffcc21;
+    --organge-light: #ff963c;
+    --organge-dark: #ea6c00;
+    --blue-light: #8fe9d0;
+}
+.light {
+    background-color: var(--light);
+}
+.dark {
+    background-color: var(--dark);
+}
+.dark-light {
+    background-color: var(--dark-light);
+}
+.gray {
+    background-color: var(--gray);
+}
+.yellow {
+    background-color: var(--yellow);
+}
+.organge-light {
+    background-color: var(--organge-light);
+}
+.organge-dark {
+    background-color: var(--organge-dark);
+}
+.blue-light {
+    background-color: var(--blue-light);
+}
+.gradient-organge {
+    background: linear-gradient(180deg, #ffcc21 0%, #ff963c 100%);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.site-container {
+    width: 1280px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/**************** HEADER *************************/
+.site-header {
+    width: 100%;
+    background-color: #2e2e2e !important;
+    height: 64px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .LOGO {
+    width: 15%;
+}
+.site-header .LOGO img {
+    height: 35px !important;
+    margin-top: 7px;
+}
+.site-header .NAV,
+.site-header .NAV-MOBILE {
+    font-family: 'Hiragino Kaku Gothic Pro';
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.site-header .NAV > a {
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.site-header .NAV > a:hover {
+    color: var(--organge-light);
+}
+
+.site-header .NAV-MOBILE {
+    display: none;
+}
+
+/****************************** END SITE HEADER **************************/
+/************** ULTILS ************************** */
+.app-icon {
+    display: inline !important;
+}
+
+/*************************** RESPONSIVE ********************************/
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    /*[class*="col-"] {
+    width: 100%;
+  }
+  */
+    .site-header .NAV {
+        display: none;
+    }
+    .site-header .NAV-MOBILE {
+        display: block;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    html {
+        color-scheme: dark;
+    }
+    body {
+        color: white;
+        background: black;
+    }
 }
