@@ -1,0 +1,126 @@
+:root {
+    --light: #fff;
+    --dark: #2e2e2e;
+    --dark-light: #414141;
+    --gray: #777777;
+    --yellow: #ffcc21;
+    --organge-light: #ff963c;
+    --organge-dark: #ea6c00;
+    --blue-light: #8fe9d0;
+}
+
+.my-chart {
+    background-color: var(--dark);
+    padding-top: 15px;
+}
+.my-chart > .title {
+    padding-left: 20px;
+    display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    /* or 120% */
+
+    letter-spacing: 0.15px;
+
+    color: #ffffff;
+}
+.my-chart > .title .name {
+    text-transform: uppercase;
+    width: 96px;
+}
+.my-chart > .title .date {
+    font-size: 22px;
+}
+
+.chart-footer {
+    color: #fff;
+
+    margin-top: -45px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+}
+
+.chart-footer ul {
+    margin: 0px;
+    padding: 0px;
+}
+.chart-footer ul li {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    
+
+    height: 24px;
+    width: 56px;
+
+    background-color: white;
+    
+    margin-right: 25px;
+
+    font-family: 'Hiragino Kaku Gothic Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 24px;
+    /* identical to box height, or 147% */
+
+    text-align: center;
+    letter-spacing: 0.075px;
+
+    color: var(--yellow);
+    border-radius: 11px;
+}
+
+.chart-footer ul li:hover, .chart-footer ul li.active{
+    background-color: var(--yellow);
+    color: white;
+}
+
+.health-graph {
+    padding: 10px;
+    height: 355px;
+
+    width: 100%;
+}
+
+.health-graph .x-labels {
+    text-anchor: middle;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Inter';
+    fill: #fff;
+}
+
+.health-graph .y-labels {
+    text-anchor: end;
+}
+
+.health-graph .health-graph-grid {
+    stroke: #ccc;
+    stroke-dasharray: 0;
+    stroke-width: 1;
+}
+
+.label-title {
+    text-anchor: middle;
+    text-transform: uppercase;
+    font-size: 12px;
+    fill: gray;
+}
+
+.health-graph-dot,
+.health-graph-dot-yellow,
+.health-graph-start-dot {
+    fill: #8fe9d0;
+    stroke-width: 0.05;
+
+    stroke: white;
+}
+.health-graph-dot-yellow {
+    fill: #ffcc21;
+}
+
+/************ END GRAPH *************/

@@ -1,3 +1,4 @@
+import React, { memo, useEffect, useState } from "react";
 
 
 const BODY_WEIGHT_2 = [
@@ -115,9 +116,23 @@ const drawLine = (arr: number[] = [], COLUMN_WIDTH: number = 50) => {
 
     }).join();
 }
-const LineChart = () => {
 
-    const COLUMN_WIDTH = 50;
+interface LineChartProps {
+    columnWidth?: number
+    type?: string
+    title?: string
+    date?: string
+    style?: React.CSSProperties
+    svgStyle?: React.CSSProperties
+}
+const LineChart: React.FC<LineChartProps> = ({ columnWidth = 50, type = "small", title = '', date = '', style = {}, svgStyle = {} }) => {
+
+    const [COLUMN_WIDTH, setW] = useState(50);
+
+    useEffect(() => {
+        setW(columnWidth);
+    }, [columnWidth])
+
     const bodyWeighLine = drawLine(BODY_WEIGHT_2.map((item) => {
         return item.value
     }), COLUMN_WIDTH);
@@ -127,25 +142,44 @@ const LineChart = () => {
 
 
 
+
+
     return (
-        <div style={{ width: '95%' }}>
-            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" className="health-graph">
+        <div className="my-chart" style={{ ...style }}>
+
+            {/* GRAPH TITLE */}
+            {
+                title !== '' && date !== '' && (
+                    <div className="title">
+                        <span className="name">
+                            BODY RECORD
+                        </span>
+                        <span className="date">
+                            2021.05.21
+                        </span>
+
+                    </div>
+                )
+            }
+
+            {/* GRAPH DATA */}
+            <svg style={{ marginLeft: -50, ...svgStyle }} version="1.2" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" className="health-graph">
+
                 <defs>
-                    <pattern id="grid" width={COLUMN_WIDTH} height={COLUMN_WIDTH} patternUnits="userSpaceOnUse">
-                        <path d="M 0 0 M 0 0 0 50" fill="none" stroke="#e5e5e5" strokeWidth={1} />
+                    <pattern id={type === 'big' ? 'big' : 'small'} width={columnWidth} height={columnWidth} patternUnits="userSpaceOnUse">
+                        <path d={`M 0 0 M 0 0 0 ${COLUMN_WIDTH}`} fill="none" stroke="#e5e5e5" strokeWidth={1} />
                     </pattern>
                 </defs>
 
 
-                <rect x={COLUMN_WIDTH} width={`calc(100% - ${COLUMN_WIDTH}px)`} height="80%" fill="url(#grid)" />
-
+                {columnWidth > 50 ? <rect x={COLUMN_WIDTH} width={`calc(100% - ${columnWidth}px)`} height="80%" fill="url(#big)" /> : <rect x={COLUMN_WIDTH} width={`calc(100% - ${columnWidth}px)`} height="80%" fill="url(#small)" />}
 
 
                 {<g className="x-labels">
                     {
                         BODY_WEIGHT_2.map((item, index) => {
                             const x = (index + 1) * COLUMN_WIDTH;
-                            const y = 290;
+                            const y = 285;
                             return (
                                 <text key={index} x={x} y={y} >{item.month}月</text>
                             )
@@ -185,8 +219,29 @@ const LineChart = () => {
 
 
             </svg>
+
+            {/* GRAPH FOOTER */}
+            {type === 'big' && (
+                <div className="chart-footer">
+                    <ul>
+                        <li>
+                            日
+                        </li>
+                        <li>
+                            週
+                        </li>
+                        <li>
+                            月
+                        </li>
+                        <li className="active">
+                            年
+                        </li>
+
+                    </ul>
+                </div>
+            )}
         </div>
     )
 }
 
-export default LineChart
+export default memo(LineChart)

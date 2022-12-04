@@ -9,7 +9,7 @@ import { CSSProperties } from 'react';
 const SectionAchievementRate = () => {
 
     return (
-        <div style={{ paddingTop:64}}>
+        <div style={{ paddingTop: 64 }}>
             <div className="achievement-board">
                 <div className="content">
                     <div className="rate" >
@@ -18,7 +18,8 @@ const SectionAchievementRate = () => {
 
                     </div>
                     <div className="graph">
-                        <LineChart />
+                        <LineChart svgStyle={{ marginLeft:0}} columnWidth={50} style={{ height: 301, marginTop: -10, width:'95%' }} />
+
                     </div>
                 </div >
             </div >
