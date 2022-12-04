@@ -65,6 +65,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: none;
+    color: var(--organge-dark);
+}
 * {
     box-sizing: border-box;
 }
@@ -86,7 +90,7 @@ a {
     width: 100%;
     background-color: var(--dark-light) !important;
     height: 64px;
-
+    top: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -176,8 +180,6 @@ a {
 }
 .achievement-board .graph {
     width: 48%;
-    
-
 }
 
 /************** END ACHIEVEMENT RATE **************************/
@@ -339,8 +341,6 @@ a {
     background-color: var(--dark);
 }
 
-
-
 /************END MY RECORD**************************/
 
 /************** ULTILS ************************** */
@@ -404,6 +404,19 @@ a {
     transition: stroke-dashoffset 1s ease-in-out;
 
     box-shadow: 0px 0px 6px #fc7400;
+}
+
+.btn-rounded {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border: 1px solid var(--gray);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
 }
 
 /*************************** RESPONSIVE ********************************/

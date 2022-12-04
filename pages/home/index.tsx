@@ -1,5 +1,6 @@
 import SiteHeader from "components/SiteHeader"
 import SectionAchievementRate from "./SectionAchievement"
+import SectionColumn from "./SectionColumn"
 import SectionFoodMenu from "./SectionFoodMenu"
 import SectionRecordLabel from "./SectionRecordLabel"
 
@@ -9,7 +10,7 @@ const Home = () => {
 
     return (
         <>
-            {/* TOP PAGE SECTION  */}
+            {/* 1:  TOP PAGE SECTION  */}
             {/* HEADER */}
             <SiteHeader />
             {/* ACHIEVEMENT RATE */}
@@ -18,11 +19,14 @@ const Home = () => {
             <SectionFoodMenu />
             {/****** END TOP PAGE SECTION  */}
 
-            {/* MY RECORD SECTION */}
+            {/* 2: MY RECORD SECTION */}
             <SectionRecordLabel />
-
             {/* END MY RECORD SECTION */}
 
+            {/* 3: COLUMN PAGE */}
+            <SectionColumn />
+
+            
         </>
     )
 }

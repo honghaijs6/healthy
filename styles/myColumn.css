@@ -1,0 +1,139 @@
+:root {
+    --light: #fff;
+    --dark: #2e2e2e;
+    --dark-light: #414141;
+    --gray: #777777;
+    --yellow: #ffcc21;
+    --organge-light: #ff963c;
+    --organge-dark: #ea6c00;
+    --blue-light: #8fe9d0;
+}
+
+.section-column-page {
+    margin-top: 0px;
+}
+
+.section-column-page > .rec-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-column-page > .rec-nav .item {
+    width: 236px;
+    min-height: 150px;
+    background-color: var(--dark);
+    color: white;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 25px;
+
+    cursor: pointer;
+}
+.section-column-page > .rec-nav .item:hover {
+    box-shadow: 0px 0px 6px #fc7400;
+}
+.section-column-page > .rec-nav .item h3 {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    /* or 123% */
+
+    text-align: center;
+    letter-spacing: 0.11px;
+
+    color: var(--yellow);
+}
+.section-column-page > .rec-nav .item hr {
+    border: 1px solid #fff;
+    width: 56px;
+    margin: 10px 0px;
+    padding: 0px;
+}
+
+.section-column-page > .rec-nav .item span {
+    font-family: 'Hiragino Kaku Gothic Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.section-column-page > .content {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-column-page > .content .article {
+    width: 267.5px;
+
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.section-column-page > .content .article .photo {
+    height: 145px;
+    background: url(/images/column-1.jpg) no-repeat;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+}
+
+.section-column-page > .content .article .photo:hover {
+    filter: grayscale(100%);
+}
+
+.section-column-page > .content .article .photo span {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: var(--yellow);
+    padding: 0px 12px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    /* identical to box height, or 200% */
+
+    color: #ffffff;
+}
+
+.section-column-page > .content .article .title {
+    margin: 10px 0px;
+
+    font-family: 'Hiragino Kaku Gothic Pro';
+
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    /* or 147% */
+
+    letter-spacing: 0.075px;
+
+    color: var(--dark);
+}
+.section-column-page > .content .article .tags {
+    margin-top: -7px;
+}
+.section-column-page > .content .article .tags a {
+    font-family: 'Hiragino Kaku Gothic Pro';
+
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.06px;
+
+    color: var(--organge-dark);
+    margin-right: 10px;
+}

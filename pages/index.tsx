@@ -8,12 +8,7 @@ import Home from './home'
 export default function Layout() {
   return (
     <div className="HEALTH-APP">
-      <Head>
-        <title>Health App</title>
-        <meta name="description" content="Health App" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      
       <Home />
 
       <SiteFooter />
