@@ -9,6 +9,14 @@
     --blue-light: #8fe9d0;
 }
 
+.my-record-graph {
+    margin-top: 30px;
+    
+    /*height: 334px;
+    overflow-y: hidden;
+    */
+
+}
 .my-chart {
     background-color: var(--dark);
     padding-top: 15px;

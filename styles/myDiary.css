@@ -1,0 +1,37 @@
+:root {
+    --light: #fff;
+    --dark: #2e2e2e;
+    --dark-light: #414141;
+    --gray: #777777;
+    --yellow: #ffcc21;
+    --organge-light: #ff963c;
+    --organge-dark: #ea6c00;
+    --blue-light: #8fe9d0;
+}
+.my-record-diary {
+    margin-top: 30px;
+}
+
+.my-record-diary > h3 {
+    text-transform: uppercase;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    /* or 123% */
+
+    letter-spacing: 0.11px;
+
+    color: #414141;
+}
+
+.my-record-diary > .content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-record-diary > .content .diary{
+    width: 231px; height: 231px;
+    border: 2px solid #707070
+}

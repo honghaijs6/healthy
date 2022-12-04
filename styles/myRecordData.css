@@ -1,0 +1,135 @@
+.my-record-data > .content::-webkit-scrollbar {
+    width: 6px !important;
+}
+ 
+.my-record-data > .content::-webkit-scrollbar-track {
+    background: #777777;
+    border-radius: 3px;
+}
+ 
+.my-record-data > .content::-webkit-scrollbar-thumb {
+    
+    background: #FFCC21;
+    border-radius: 3px;
+
+}
+
+:root {
+    --light: #fff;
+    --dark: #2e2e2e;
+    --dark-light: #414141;
+    --gray: #777777;
+    --yellow: #ffcc21;
+    --organge-light: #ff963c;
+    --organge-dark: #ea6c00;
+    --blue-light: #8fe9d0;
+}
+.my-record-data {
+    margin-top: 30px;
+    background-color: var(--dark);
+    padding: 20px 30px;
+}
+.my-record-data .title {
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.my-record-data .title label {
+    width: 50px;
+    font-family: 'Inter';
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    /* or 120% */
+
+    letter-spacing: 0.15px;
+
+    color: #ffffff;
+}
+
+.my-record-data > .title > span {
+    margin-left: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    /* identical to box height, or 123% */
+
+    letter-spacing: 0.11px;
+
+    color: #ffffff;
+}
+
+.my-record-data > .content {
+    display: flex;
+    flex-direction: row;
+    max-height: 155px;
+    overflow-y: auto;
+}
+
+.my-record-data > .content > .left,
+.my-record-data > .content > .right {
+    width: 45%;
+}
+
+.my-record-data > .content > .right {
+    margin-left: 5%;
+}
+
+.my-record-data ul.data {
+    margin: 0px;
+    padding: 0px;
+}
+.my-record-data ul.data li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    color: white;
+
+    font-family: 'Hiragino Kaku Gothic Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height, or 147% */
+
+    letter-spacing: 0.075px;
+    padding: 7px 0;
+
+    border-bottom: 1px solid #777777;
+}
+.my-record-data ul.data li:last-of-type {
+    border: 0px;
+}
+
+.my-record-data ul.data li .title span {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height, or 120% */
+
+    letter-spacing: 0.075px;
+
+    color: #ffcc21;
+}
+
+.my-record-data ul.data li .time {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height, or 122% */
+
+    text-align: right;
+    letter-spacing: 0.09px;
+
+    color: #ffcc21;
+}

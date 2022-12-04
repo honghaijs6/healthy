@@ -1,3 +1,4 @@
+
 import LineChart from "components/LineChart"
 import SquareRecord from "components/SqareRecord"
 
@@ -21,11 +22,60 @@ const SectionRecordLabel = () => {
                 </div>
 
                 <div className="my-record-data">
-                    My Exercise here
+                    
+                    <div className="title">
+                        <label>My Exercise</label>
+                        <span>2021.05.21</span>
+                    </div>
+                    <div className="content">
+                        <div className="left">
+                            <ul className="data">
+                                {
+                                    Array.from(Array(10)).map((_, index) => {
+                                        return (
+                                            <li key={index}>
+                                                <div className="title">
+                                                    家事全般（立位・軽い）<br />
+                                                    <span>26kcal</span>
+                                                </div>
+                                                <div className="time">
+                                                    10 mins
+                                                </div>
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                        <div className="right">
+                            <ul className="data">
+                                {
+                                    Array.from(Array(8)).map((_, index) => {
+                                        return (
+                                            <li key={index}>
+                                                <div className="title">
+                                                    家事全般（立位・軽い）<br />
+                                                    <span>26kcal</span>
+                                                </div>
+                                                <div className="time">
+                                                    10 mins
+                                                </div>
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="my-record-diary">
-                    My Diary here
+                    <h3>My Diary</h3>
+                    <div className="content">
+                        <div className="diary">
+                            asasd
+                        </div>
+                    </div>
                 </div>
 
             </div>
