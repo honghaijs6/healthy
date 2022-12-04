@@ -1,6 +1,5 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css');
 
-
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
@@ -143,69 +142,107 @@ a {
 }
 
 .achievement-board .rate {
-    width: 540px;
+    width: 47.5%;
     height: 316px;
 
-    background: linear-gradient(225deg, rgba(255, 204, 33, 0), rgba(255, 150, 60, 0.65)), url('/images/d01.jpg') center -180px;
+    background: linear-gradient(225deg, rgba(255, 204, 33, 0), rgba(255, 150, 60, 0.65)), url('/images/d01.jpg') no-repeat center -180px;
     opacity: 1;
 
     display: grid;
     place-items: center;
+    
+}
+.achievement-board .graph{
+  width: 48%;
+  
 }
 
 /************** END ACHIEVEMENT RATE **************************/
 
 /************** ULTILS ************************** */
-#my-chart.line {
-  height: 200px;
-  max-width: 400px;
-  margin: 0 auto;
+
+
+.health-graph {
+    padding: 10px;
+    height: 361px;
+    width: 100%;
 }
 
+.health-graph .x-labels {
+    text-anchor: middle;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Inter';
+    fill: #fff;
+    
+}
+
+.health-graph .y-labels {
+    text-anchor: end;
+}
+
+.health-graph .health-graph-grid {
+    stroke: #ccc;
+    stroke-dasharray: 0;
+    stroke-width: 1;
+}
+
+.label-title {
+    text-anchor: middle;
+    text-transform: uppercase;
+    font-size: 12px;
+    fill: gray;
+}
+
+.health-graph-dot,.health-graph-dot-yellow,
+.health-graph-start-dot {
+    fill: #8FE9D0;
+    stroke-width: 0.05;
+    
+    stroke: white;
+}
+.health-graph-dot-yellow{
+  fill:#FFCC21 ;
+}
 .app-icon {
     display: inline !important;
 }
 
 /** CIRCLE PROGRESS BAR */
 
-.circle-progress{
-  height: 181px;
-  width: 181px;
+.circle-progress {
+    height: 181px;
+    width: 181px;
 
-  position:relative;
+    position: relative;
 }
 .circle-progress svg {
-  height: 181px;
-  transform: rotate(-90deg);
-  width: 181px;
-
-  
+    height: 181px;
+    transform: rotate(-90deg);
+    width: 181px;
 }
 
 .progress-bar__background {
-  fill: none;
-  stroke: transparent;
-  stroke-width: 0.7;
+    fill: none;
+    stroke: transparent;
+    stroke-width: 0.7;
 }
 
 .progress-bar__progress {
-  fill: none;
-  stroke: #fff;
+    fill: none;
+    stroke: #fff;
 
-  
-  stroke-dasharray: 100 100;
-  stroke-dashoffset: 100;
-  
-  stroke-linecap: round;
-  
-  stroke-width: 0.7;
-  
-  transition: stroke-dashoffset 1s ease-in-out;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 100;
 
-  box-shadow: 0px 0px 6px #FC7400;
+    stroke-linecap: round;
 
+    stroke-width: 0.7;
+
+    transition: stroke-dashoffset 1s ease-in-out;
+
+    box-shadow: 0px 0px 6px #fc7400;
 }
-
 
 /*************************** RESPONSIVE ********************************/
 @media only screen and (max-width: 768px) {

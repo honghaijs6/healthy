@@ -1,7 +1,8 @@
 import CirleProgressBar from "components/CircleProgressBar"
+import LineChart from "components/LineChart";
 
 import { CSSProperties } from 'react';
-import { AreaChart } from 'charts-css-react';
+
 
 
 
@@ -16,9 +17,8 @@ const SectionAchievementRate = () => {
 
                 </div>
                 <div className="graph">
-                <AreaChart data={[2, 4, 8, 6, 1, 3]} />
-
-                </div >
+                <LineChart />
+                </div>
             </div >
         </div >
     )
