@@ -1,5 +1,18 @@
 import Icon from "./Icon"
 
+const LIST = [
+    { icon: 'note', title: '自分の記録', size: 26 },
+    { icon: 'challenge', title: 'チャレンジ', size: 32 },
+    { icon: 'info', title: 'お知らせ', size: 32 },
+    { icon: 'menu', title: '', size: 32 },
+
+];
+
+interface iNav {
+    icon: string
+    title: string
+    size: number
+}
 const SiteHeader = () => {
 
     return (
@@ -9,21 +22,16 @@ const SiteHeader = () => {
                     <img src="/logo.png" alt="Health logo" />
                 </div>
                 <div className="NAV">
-                    <a>
-                        <Icon name="note" size={26} />
-                        自分の記録
-                    </a>
-                    <a>
-                        <Icon name="challenge" size={32} />
-                        チャレンジ
-                    </a>
-                    <a>
-                        <Icon name="info" size={32} />
-                        お知らせ
-                    </a>
-                    <a>
-                        <Icon name="menu" size={32} />
-                    </a>
+                    {
+                        LIST.map((item: iNav, index: number) => {
+                            return (
+                                <a key={index}>
+                                    <Icon name={item.icon} size={item.size} />
+                                    {item.title}
+                                </a>
+                            )
+                        })
+                    }
                 </div>
 
                 <div className="NAV-MOBILE">
