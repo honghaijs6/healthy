@@ -15,6 +15,8 @@ body {
     background-color: #fff;
 
     font-size: 14px !important;
+
+    overflow-x: hidden;
 }
 
 /************* COLOR ********************/
@@ -32,6 +34,8 @@ body {
     --organge-dark: #ea6c00;
     --blue-light: #8fe9d0;
 }
+
+
 .light {
     background-color: var(--light);
 }
@@ -140,50 +144,26 @@ a:hover {
 .site-footer {
     margin-top: 50px;
     background-color: var(--dark);
-    height: 128px;
-
+    
     display: flex;
-
     align-items: center;
-}
-.site-footer a.item {
-    color: var(--light);
-    margin: 0 15px;
-    cursor: pointer;
-}
-.site-footer a.item:hover {
-    color: var(--yellow);
+    padding: 50px 0px;
 }
 
-/*************** ACHIEVEMENT RATE *******************************/
-.achievement-board {
-    height: 316px;
-    background-color: var(--dark);
-    color: #fff;
-}
-.achievement-board > .content {
-    width: 1400px !important;
-    margin: auto;
-
+.site-footer > .wrapper{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.achievement-board .rate {
-    width: 47.5%;
-    height: 316px;
 
-    background: linear-gradient(225deg, rgba(255, 204, 33, 0), rgba(255, 150, 60, 0.65)), url('/images/d01.jpg') no-repeat center -180px;
-    opacity: 1;
 
-    display: grid;
-    place-items: center;
+.site-footer > .wrapper .item{
+    margin-right: 40px;
 }
-.achievement-board .graph {
-    width: 48%;
+.site-footer > .wrapper a.item:hover{
+    color: var(--yellow) !important;
 }
 
-/************** END ACHIEVEMENT RATE **************************/
 
 /******************* FOOD MENU ********************************/
 .section-food-menu {
@@ -218,6 +198,11 @@ a:hover {
 }
 
 .section-food-menu .content > .item {
+    background: url(/images/m01.jpg) ;
+    background-size:contain;
+    
+    background-repeat: no-repeat;
+
     width: 255px;
     height: 255px;
     position: relative;
@@ -226,7 +211,7 @@ a:hover {
     cursor: pointer;
 }
 .section-food-menu .content > .item:hover {
-    transform: scale(1.1);
+    
     box-shadow: 0px 0px 6px #fc7400;
     z-index: 2000;
 }
@@ -416,12 +401,85 @@ a:hover {
     place-items: center;
     border-radius: 50%;
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    bottom: 20px;
+    right: 20px;
 }
 .btn-rounded:hover {
     border: 1px solid var(--yellow);
 }
+
+
+//////////////////////////////////////////////// GRID ///////////////////////////////////////////////
+
+.grid-list {
+    display: grid;
+    grid-gap: 2.3em;
+    grid-template-columns: minmax(70px, 10%) auto;
+}
+.grid-2 {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(calc((100% / 2 - 2em)), 1fr)
+    );
+}
+
+.grid-3 {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(calc((100% / 3 - 2em)), 1fr)
+    );
+}
+
+.grid-4 {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(calc((100% / 4 - 2em)), 1fr)
+    );
+}
+
+.split-2,
+.split-3,
+.split-4,
+.split-5,
+.split-6 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0em;
+    flex-direction: row;
+}
+.split-2 > .item {
+    display: block;
+    width: calc(100% / 2);
+
+    color: #fff;
+}
+
+.split-3 > .item {
+    display: block;
+    width: calc(100% / 3);
+}
+.split-4 > .item {
+    display: block;
+    width: calc(100% / 4);
+}
+.split-5 > .item {
+    display: block;
+    width: calc(100% / 5);
+}
+
+.split-6 > .item {
+    display: block;
+    width: calc(100% / 6);
+}
+
+
+/*************** END GRID ***************/
 
 /*************************** RESPONSIVE ********************************/
 @media only screen and (max-width: 768px) {

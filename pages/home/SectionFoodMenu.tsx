@@ -92,8 +92,7 @@ const SectionFoodMenu = () => {
                 {
                     DATA.slice(0, 8).map((item, index) => {
                         return (
-                            <div key={index} className="item">
-                                <img src={item.photo} />
+                            <div key={index} className="item" style={{ background: 'url(' + item.photo + ')' }}>
                                 <label>
                                     {item.title}
                                 </label>
@@ -102,7 +101,7 @@ const SectionFoodMenu = () => {
                     })
                 }
 
-                <button className="btn my-btn btn-load-more" style={{ marginTop:30}}>記録をもっと見る</button>
+                <button className="btn my-btn btn-load-more" style={{ marginTop: 30 }}>記録をもっと見る</button>
             </div>
         </div>
     )

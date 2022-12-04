@@ -10,23 +10,13 @@ const Home = () => {
 
     return (
         <>
-            {/* 1:  TOP PAGE SECTION  */}
-            {/* HEADER */}
-            <SiteHeader />
-            {/* ACHIEVEMENT RATE */}
+
             <SectionAchievementRate />
-            {/* FOOD MENU */}
             <SectionFoodMenu />
-            {/****** END TOP PAGE SECTION  */}
-
-            {/* 2: MY RECORD SECTION */}
             <SectionRecordLabel />
-            {/* END MY RECORD SECTION */}
+            <SectionColumn /> 
 
-            {/* 3: COLUMN PAGE */}
-            <SectionColumn />
 
-            
         </>
     )
 }

@@ -1,0 +1,36 @@
+/*************** ACHIEVEMENT RATE *******************************/
+.achievement-board {
+    
+    background-color: var(--dark);
+    color: #fff;
+}
+.achievement-board > .content {
+    width: 1400px ;
+    margin: auto;
+
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0em;
+    flex-direction: row;
+
+    
+}
+
+.achievement-board .rate {
+
+    width: calc(100% / 2 - 90px);
+    
+    height: 316px;
+
+    background: linear-gradient(225deg, rgba(255, 204, 33, 0), rgba(255, 150, 60, 0.65)), url('/images/d01.jpg') no-repeat center -180px;
+    opacity: 1;
+
+    display: grid;
+    place-items: center;
+}
+.achievement-board .graph {
+    width: 48%;
+}
+
+/************** END ACHIEVEMENT RATE **************************/

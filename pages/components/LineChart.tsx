@@ -166,13 +166,13 @@ const LineChart: React.FC<LineChartProps> = ({ columnWidth = 50, type = "small",
             <svg style={{ marginLeft: -50, ...svgStyle }} version="1.2" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" className="health-graph">
 
                 <defs>
-                    <pattern id={type === 'big' ? 'big' : 'small'} width={columnWidth} height={columnWidth} patternUnits="userSpaceOnUse">
+                    <pattern id={type} width={columnWidth} height={columnWidth} patternUnits="userSpaceOnUse">
                         <path d={`M 0 0 M 0 0 0 ${COLUMN_WIDTH}`} fill="none" stroke="#e5e5e5" strokeWidth={1} />
                     </pattern>
                 </defs>
 
 
-                {columnWidth > 50 ? <rect x={COLUMN_WIDTH} width={`calc(100% - ${columnWidth}px)`} height="80%" fill="url(#big)" /> : <rect x={COLUMN_WIDTH} width={`calc(100% - ${columnWidth}px)`} height="80%" fill="url(#small)" />}
+                {type === 'big' ? <rect x={COLUMN_WIDTH} width={`calc(100% - ${columnWidth}px)`} height="80%" fill="url(#big)" /> : <rect x={COLUMN_WIDTH} width={`calc(100% - ${columnWidth}px)`} height="80%" fill="url(#small)" />}
 
 
                 {<g className="x-labels">

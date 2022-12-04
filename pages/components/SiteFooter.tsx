@@ -13,16 +13,16 @@ const SiteFooter = () => {
 
 
     const scrollToTop = () => {
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo({ top: 0, behavior: 'smooth' });
 
     }
     return (
         <footer className='site-footer'>
-            <div className='container'>
+            <div className='container wrapper'>
                 {
                     LIST.map((item, index) => {
                         return (
-                            <a className="item" key={index}>{item}</a>
+                            <a href="#" className="item text-white" key={index}>{item}</a>
                         )
                     })
                 }

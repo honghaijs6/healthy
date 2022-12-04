@@ -78,6 +78,7 @@ const SectionColumn = () => {
     return (
         <>
             <div id="NEWS" style={{ height: 70 }}></div>
+            
             <div className="container" >
                 <div className="section-column-page">
                     <div className="rec-nav">

@@ -1,0 +1,204 @@
+@media only screen and (max-width: 768px) {
+    /****** FOOTER SIDE ********/
+    .site-footer > .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0em;
+        flex-direction: row;
+    }
+
+    .site-footer > .wrapper .item {
+        display: block;
+        width: calc(100% / 2);
+
+        padding: 7px;
+    }
+
+    /********ACHIEVEMENT *********/
+    .achievement-board > .content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0em;
+        flex-direction: row;
+    }
+
+    .achievement-board .rate {
+        width: 100% !important;
+
+        height: 316px;
+
+        background: linear-gradient(225deg, rgba(255, 204, 33, 0), rgba(255, 150, 60, 0.65)), url('/images/d01.jpg') no-repeat;
+        background-position: -100px -20px;
+        opacity: 1;
+    }
+    .achievement-board .graph {
+        width: 100% !important;
+    }
+
+    .circle-progress {
+        left: 32%;
+        height: 181px;
+        width: 181px;
+
+        position: absolute;
+    }
+
+    /******************* FOOD MENU ********************************/
+
+    .section-food-menu .tab {
+        width: 100%;
+        margin: auto;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /************ ULTILS *******************************/
+    .shape-food {
+        border: 0px;
+        width: 96px;
+        height: 81px;
+        background-color: var(--organge-light);
+        border-color: var(--organge-light);
+        position: relative;
+        display: grid;
+        place-items: center;
+
+        font-size: initial; /* we reset the font-size if we want to add some content */
+        clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+
+        background: linear-gradient(55.89deg, #ffcc21 8.26%, #ff963c 91.18%);
+    }
+    .shape-food:hover {
+        transform: scale(1.1);
+    }
+    .shape-food label {
+        position: absolute;
+        bottom: 10px;
+        font-size: 12px;
+        font-family: 'Inter';
+        font-weight: 400;
+        color: #fff;
+    }
+
+    .section-food-menu .content > .item {
+        width: 100%;
+        height: 325px;
+        position: relative;
+        margin: 6px;
+
+        cursor: pointer;
+    }
+
+    .section-food-menu .content > .item img {
+        width: 100%;
+        height: 354px;
+    }
+
+    /************ MY RECORD ****************************/
+    .my-record-nav {
+        margin-top: 20px;
+        display: block !important;
+    }
+    .record-square {
+        position: relative;
+        width: 100% !important;
+        height: 322px;
+        background-color: var(--yellow);
+        padding: 24px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+
+    .record-square > .marked {
+        position: absolute;
+        margin: 24px;
+        left: 0;
+        top: 0;
+        width: 89.5%;
+        height: 85.1%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: grid;
+        place-items: center;
+        z-index: 2000;
+    }
+
+    /********EXERCISE DATA************/
+
+    .my-record-data > .content {
+        display: block !important;
+
+        max-height: 155px;
+        overflow-y: auto;
+    }
+
+    .my-record-data > .content > .left,
+    .my-record-data > .content > .right {
+        width: 95% !important;
+    }
+
+    .my-record-data > .content > .right {
+        margin-left: 0% !important;
+    }
+
+    /************DIARY SECTION*********************/
+
+    .my-record-diary > .content {
+        display: block;
+    }
+
+    .my-record-diary > .content .diary {
+        width: 95%;
+        margin: auto;
+
+        border: 2px solid #707070;
+        margin-right: 15.5px;
+        margin-bottom: 15.5px;
+        padding: 20px;
+    }
+
+    /*******************COLUMN PAGE****************************/
+    .section-column-page > .rec-nav {
+        display: block;
+    }
+
+    .section-column-page > .rec-nav .item {
+        width: 70%;
+        margin: auto;
+        min-height: 150px;
+        background-color: var(--dark);
+        color: white;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 25px;
+
+        margin-bottom: 20px;
+
+        cursor: pointer;
+    }
+
+    .section-column-page > .content {
+        margin-top: 50px;
+        display: block;
+    }
+
+    .section-column-page > .content .article {
+        width: 100%;
+
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section-column-page > .content .article .photo {
+        height: 245px;
+        background: url(/images/column-1.jpg) no-repeat;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        position: relative;
+    }
+}

@@ -1,12 +1,36 @@
 
 import LineChart from "components/LineChart"
 import SquareRecord from "components/SqareRecord"
+import useWindowDimensions from "pages/hooks/useWindowDimension"
+import { useEffect, useState } from "react";
 
 
 const SectionRecordLabel = () => {
+
+    const handleScreen = useWindowDimensions();
+
+    const [localStyle, setStyle] = useState({
+        marginLeft: -50,
+        columnWidth: 90
+    })
+
+    useEffect(() => {
+
+        if (handleScreen) {
+            setStyle({
+                marginLeft: handleScreen?.width > 768 ? -50 : -10,
+                columnWidth: handleScreen?.width > 768 ? 90 : 34
+            })
+        }
+    }, [handleScreen?.width])
+
+
+
+    const { marginLeft, columnWidth } = localStyle
+
     return (
         <div>
-            <div id="MY-RECORD" style={{ height:70}}></div>
+            <div id="MY-RECORD" style={{ height: 70 }}></div>
             <div className="container">
                 <div className="my-record">
                     <div className="my-record-nav">
@@ -19,11 +43,19 @@ const SectionRecordLabel = () => {
 
                     </div>
 
+                    {/* BODY RECORD GRAPH */}
                     <div className="my-record-graph">
-                        <LineChart type="big" title="BODY RECORD" date="2021.05.21" columnWidth={87} />
+                        <LineChart svgStyle={{ marginLeft }}
+                            type="big"
+                            title="BODY RECORD"
+                            date="2021.05.21"
+                            columnWidth={columnWidth}
+                        />
                     </div>
 
-                    <div id="MY-EXERCISE" style={{ height:70}}></div>
+                    <div id="MY-EXERCISE" style={{ height: 70 }}></div>
+
+                    {/* EXERCISE DATA */}
                     <div className="my-record-data" >
 
                         <div className="title">
@@ -72,6 +104,8 @@ const SectionRecordLabel = () => {
                         </div>
                     </div>
 
+
+                    {/* DIARY DATA */}
                     <div className="my-record-diary">
                         <h3>My Diary</h3>
                         <div className="content">
