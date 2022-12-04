@@ -106,6 +106,7 @@ a:hover {
 .site-header .LOGO img {
     height: 35px !important;
     margin-top: 7px;
+    cursor: pointer;
 }
 .site-header .NAV,
 .site-header .NAV-MOBILE {
@@ -417,6 +418,9 @@ a:hover {
     position: fixed;
     bottom: 50px;
     right: 50px;
+}
+.btn-rounded:hover {
+    border: 1px solid var(--yellow);
 }
 
 /*************************** RESPONSIVE ********************************/
