@@ -35,7 +35,6 @@ body {
     --blue-light: #8fe9d0;
 }
 
-
 .light {
     background-color: var(--light);
 }
@@ -120,6 +119,35 @@ a:hover {
     color: #fff;
     display: flex;
     align-items: center;
+    position: relative;
+}
+
+ul.drawMenu {
+    right: 30px;
+    top: 54px;
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    min-width: 250px;
+    background-color: var(--gray);
+}
+.drawMenu li {
+    list-style: none;
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    font-family: 'Hiragino Kaku Gothic Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: #ffffff;
+    cursor: pointer;
+}
+.drawMenu li:hover {
+    color: var(--yellow);
 }
 
 .site-header .NAV > a {
@@ -144,26 +172,23 @@ a:hover {
 .site-footer {
     margin-top: 50px;
     background-color: var(--dark);
-    
+
     display: flex;
     align-items: center;
     padding: 50px 0px;
 }
 
-.site-footer > .wrapper{
+.site-footer > .wrapper {
     display: flex;
     flex-wrap: wrap;
 }
 
-
-
-.site-footer > .wrapper .item{
+.site-footer > .wrapper .item {
     margin-right: 40px;
 }
-.site-footer > .wrapper a.item:hover{
+.site-footer > .wrapper a.item:hover {
     color: var(--yellow) !important;
 }
-
 
 /******************* FOOD MENU ********************************/
 .section-food-menu {
@@ -198,9 +223,9 @@ a:hover {
 }
 
 .section-food-menu .content > .item {
-    background: url(/images/m01.jpg) ;
-    background-size:contain;
-    
+    background: url(/images/m01.jpg);
+    background-size: contain;
+
     background-repeat: no-repeat;
 
     width: 255px;
@@ -211,7 +236,6 @@ a:hover {
     cursor: pointer;
 }
 .section-food-menu .content > .item:hover {
-    
     box-shadow: 0px 0px 6px #fc7400;
     z-index: 2000;
 }
@@ -408,7 +432,6 @@ a:hover {
     border: 1px solid var(--yellow);
 }
 
-
 //////////////////////////////////////////////// GRID ///////////////////////////////////////////////
 
 .grid-list {
@@ -419,28 +442,19 @@ a:hover {
 .grid-2 {
     display: grid;
     grid-gap: 2em;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(calc((100% / 2 - 2em)), 1fr)
-    );
+    grid-template-columns: repeat(auto-fit, minmax(calc((100% / 2 - 2em)), 1fr));
 }
 
 .grid-3 {
     display: grid;
     grid-gap: 2em;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(calc((100% / 3 - 2em)), 1fr)
-    );
+    grid-template-columns: repeat(auto-fit, minmax(calc((100% / 3 - 2em)), 1fr));
 }
 
 .grid-4 {
     display: grid;
     grid-gap: 2em;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(calc((100% / 4 - 2em)), 1fr)
-    );
+    grid-template-columns: repeat(auto-fit, minmax(calc((100% / 4 - 2em)), 1fr));
 }
 
 .split-2,
@@ -478,6 +492,19 @@ a:hover {
     width: calc(100% / 6);
 }
 
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+
+.line-1:hover{
+    stroke: var(--organge-dark)
+}
+.line-2:hover{
+    stroke: var(--organge-dark);
+}
 
 /*************** END GRID ***************/
 

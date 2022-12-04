@@ -79,6 +79,15 @@ const Icon: React.FC<IconProps> = ({ name = 'note', size = 20, color = '#FF963C'
                 <path d="M14.5853 9.04198L8.00029 2.65788L1.41525 9.04198L0.539062 8.19253L8.0003 0.958984L15.4615 8.19253L14.5853 9.04198Z" fill={color} />
             </svg>
 
+        ),
+
+        close: (
+            <svg height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect opacity="0.01" width="32" height="32" fill={color} />
+                <path d="M7 7L26 26" stroke={color} stroke-width="3" />
+                <path d="M7 26L26 7" stroke={color} stroke-width="3" />
+            </svg>
+
         )
     }
 

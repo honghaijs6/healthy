@@ -107,7 +107,7 @@ const BODY_FAT_2 = [
 
 const drawLine = (arr: number[] = [], COLUMN_WIDTH: number = 50) => {
     return arr.map((item, index) => {
-        const stt = index + 1;
+        const stt: number = index + 1;
         const obj = {
             x: stt * COLUMN_WIDTH,
             y: item
@@ -124,8 +124,10 @@ interface LineChartProps {
     date?: string
     style?: React.CSSProperties
     svgStyle?: React.CSSProperties
+
+    onLineClick?(line: string): void
 }
-const LineChart: React.FC<LineChartProps> = ({ columnWidth = 50, type = "small", title = '', date = '', style = {}, svgStyle = {} }) => {
+const LineChart: React.FC<LineChartProps> = ({ onLineClick = (line: string) => { }, columnWidth = 50, type = "small", title = '', date = '', style = {}, svgStyle = {} }) => {
 
     const [COLUMN_WIDTH, setW] = useState(50);
 
@@ -188,8 +190,8 @@ const LineChart: React.FC<LineChartProps> = ({ columnWidth = 50, type = "small",
                 </g>
                 }
                 {/* LINE 1 */}
-                <polyline fill="url(#grad)" stroke="#8FE9D0" strokeWidth={3} points={bodyWeighLine} />
-                <g>
+                <polyline onClick={() => onLineClick('line_1')} className="line-1" fill="url(#grad)" stroke="#8FE9D0" strokeWidth={3} points={bodyWeighLine} />
+                <g onClick={() => onLineClick('line_1')}>
                     {
                         BODY_WEIGHT_2.map((item) => {
                             return item.value
@@ -203,8 +205,8 @@ const LineChart: React.FC<LineChartProps> = ({ columnWidth = 50, type = "small",
                 </g>
 
                 {/* LINE 2 */}
-                <polyline fill="url(#grad)" stroke="#FFCC21" strokeWidth={3} points={bodyFatLine} />
-                <g>
+                <polyline onClick={() => onLineClick('line_2')} className="line-2" fill="url(#grad)" stroke="#FFCC21" strokeWidth={3} points={bodyFatLine} />
+                <g onClick={() => onLineClick('line_2')}>
                     {
                         BODY_FAT_2.map((item) => {
                             return item.value

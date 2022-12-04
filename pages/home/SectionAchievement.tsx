@@ -13,7 +13,9 @@ const SectionAchievementRate = () => {
         height: 301,
         marginTop: -10,
         marginLeft: 0,
-        columnWidth: 50
+        columnWidth: 50,
+
+        percentafe: 75
     });
     const handleResize = useWindowDimensions();
 
@@ -27,13 +29,32 @@ const SectionAchievementRate = () => {
                     ...prev,
                     height: handleResize?.width > 768 ? 301 : 330,
                     marginTop: handleResize?.width > 768 ? -10 : 0,
-                    marginLeft: handleResize?.width > 768 ? 0 : -25,
+                    marginLeft: handleResize?.width > 768 ? 20 : -25,
                     columnWidth: handleResize?.width > 768 ? 50 : 38
                 }
             });
         }
 
-    }, [handleResize?.width])
+    }, [handleResize?.width]);
+
+    const onGraphLineClick = (line: string) => {
+        try {
+
+            const mix: any = {
+                line_1: 75,
+                line_2: 25
+            }
+
+            setStyle((prev) => {
+                return {
+                    ...prev,
+                    percentafe: mix[line]
+                }
+            })
+
+
+        } catch { }
+    }
 
 
     const { height, marginTop, marginLeft, columnWidth } = localStyle;
@@ -43,11 +64,19 @@ const SectionAchievementRate = () => {
                 <div className="content">
                     <div className="rate" >
 
-                        <CirleProgressBar percentage={75} />
+                        <CirleProgressBar percentage={localStyle.percentafe} />
 
                     </div>
                     <div className="graph" >
-                        <LineChart svgStyle={{ marginLeft }} columnWidth={columnWidth} style={{ height, marginTop, width: '95%' }} />
+                        <LineChart
+                            onLineClick={(line) => {
+                                onGraphLineClick(line)
+                            }}
+                            svgStyle={{ marginLeft }}
+                            columnWidth={columnWidth}
+                            style={{ height, marginTop, width: '95%' }}
+
+                        />
 
                     </div>
                 </div >

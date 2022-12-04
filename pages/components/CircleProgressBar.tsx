@@ -12,7 +12,10 @@ const CirleProgressBar = ({ percentage = 0 }) => {
                 />
             </svg>
             <label style={{ display: 'grid', fontSize: 25, placeItems: 'center', width: 181, height: 181, position: 'absolute', top: 0, left: 0, }}>
-                <span style={{ textShadow: '0px 0px 6px #FCA500' }}> {percentage} %</span>
+                <div>
+                    <small>05/21</small>
+                    <span style={{ textShadow: '0px 0px 6px #FCA500' }}> {percentage} %</span>
+                </div>
             </label>
         </div>
     )
