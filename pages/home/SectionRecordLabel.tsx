@@ -22,7 +22,7 @@ const SectionRecordLabel = () => {
                 </div>
 
                 <div className="my-record-data">
-                    
+
                     <div className="title">
                         <label>My Exercise</label>
                         <span>2021.05.21</span>
@@ -72,9 +72,24 @@ const SectionRecordLabel = () => {
                 <div className="my-record-diary">
                     <h3>My Diary</h3>
                     <div className="content">
-                        <div className="diary">
-                            asasd
-                        </div>
+                        {
+                            Array.from(Array(8)).map((_, index) => {
+                                return (
+                                    <div key={index} className="diary">
+                                        <h4>2021.05.21</h4>
+                                        <span>23:25</span>
+                                        <div className="text">
+                                            私の日記の記録が一部表示されます。
+                                            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト…
+                                        </div>
+
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                    <div style={{ textAlign:'center',marginTop:30}}>
+                        <button className="btn my-btn btn-load-more" >自分の日記をもっと見る</button>
                     </div>
                 </div>
 

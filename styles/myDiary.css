@@ -26,12 +26,51 @@
     color: #414141;
 }
 
-.my-record-diary > .content{
+.my-record-diary > .content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.my-record-diary > .content .diary{
-    width: 231px; height: 231px;
-    border: 2px solid #707070
+.my-record-diary > .content .diary {
+    width: 262px;
+    
+    border: 2px solid #707070;
+    margin-right: 15.5px;
+    margin-bottom: 15.5px;
+    padding: 20px;
+}
+.my-record-diary > .content .diary:hover{
+    border: 2px solid var(--organge-light);
+}
+
+.my-record-diary > .content .diary > h4,
+.my-record-diary > .content .diary > span {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    /* or 122% */
+
+    letter-spacing: 0.09px;
+
+    color: #414141;
+}
+
+.my-record-diary > .content .diary > .text {
+    margin-top: 10px;
+
+    font-family: 'Hiragino Kaku Gothic Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 17px;
+    /* or 142% */
+
+    letter-spacing: 0.06px;
+
+    color: #414141;
 }
