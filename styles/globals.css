@@ -13,12 +13,15 @@ body {
     margin: 0;
     font-family: Noto-san, Ubuntu, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     background-color: #fff;
-    overflow-y: hidden;
-    overflow-x: hidden;
+
     font-size: 14px !important;
 }
 
 /************* COLOR ********************/
+.HEALTH-APP {
+    font-size: 14px;
+    font-family: 'Inter';
+}
 :root {
     --light: #fff;
     --dark: #2e2e2e;
@@ -88,6 +91,10 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
+    position: fixed;
+    z-index: 2000;
+
 }
 
 .site-header .LOGO {
@@ -124,11 +131,30 @@ a {
 .site-header .NAV-MOBILE {
     display: none;
 }
-
 /****************************** END SITE HEADER **************************/
+
+.site-footer{
+  margin-top: 50px;
+  background-color: var(--dark);
+  height: 128px;
+  
+  display: flex;
+  
+  align-items: center;
+
+}
+.site-footer a.item{
+  color: var(--light);
+  margin: 0 15px;
+  cursor: pointer;
+}
+.site-footer a.item:hover{
+  color: var(--yellow);
+}
 
 /*************** ACHIEVEMENT RATE *******************************/
 .achievement-board {
+    
     height: 316px;
     background-color: var(--dark);
     color: #fff;
@@ -150,18 +176,122 @@ a {
 
     display: grid;
     place-items: center;
-    
 }
-.achievement-board .graph{
-  width: 48%;
-  
+.achievement-board .graph {
+    width: 48%;
 }
 
 /************** END ACHIEVEMENT RATE **************************/
 
+/******************* FOOD MENU ********************************/
+.section-food-menu {
+    margin: auto;
+
+    padding: 20px;
+}
+
+.section-food-menu .tab {
+    width: 80%;
+    margin: auto;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.section-food-menu .tab > .shape-food {
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.section-food-menu .content {
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+}
+
+.section-food-menu .content > .item {
+    width: 254px;
+    height: 254px;
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+}
+.section-food-menu .content > .item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 6px #fc7400;
+    z-index: 2000;
+}
+.section-food-menu .content > .item img {
+    width: 254px;
+    height: 254px;
+}
+.section-food-menu .content label {
+    background: var(--yellow);
+    color: #fff;
+    padding: 5px 10px;
+    position: absolute;
+    left: 0px;
+    bottom: -8px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Inter';
+    line-height: 18px;
+}
+
+.shape-food {
+    border: 0px;
+    width: 116px;
+    height: 134px;
+    background-color: var(--organge-light);
+    border-color: var(--organge-light);
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    font-size: initial; /* we reset the font-size if we want to add some content */
+    clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
+
+    background: linear-gradient(55.89deg, #ffcc21 8.26%, #ff963c 91.18%);
+}
+.shape-food:hover {
+    transform: scale(1.1);
+}
+.shape-food label {
+    position: absolute;
+    bottom: 15px;
+    font-size: 20px;
+    font-family: 'Inter';
+    font-weight: 400;
+    color: #fff;
+}
+
 /************** ULTILS ************************** */
 
+.my-btn,.btn-load-more {
+    height: 56px;
+    padding: 0px 20px;
+    font-family: 'Hiragino Kaku Gothic Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
 
+    background: linear-gradient(355.95deg, #ffcc21 8.75%, #ff963c 86.64%);
+    color: #fff;
+}
+.my-btn:hover{
+  background: linear-gradient(55.89deg, #ffcc21 8.26%, #ff963c 91.18%);
+
+}
+.btn-load-more{ 
+  width: 296px;
+  align-items: center;
+}
 .health-graph {
     padding: 10px;
     height: 361px;
@@ -174,7 +304,6 @@ a {
     font-weight: 400;
     font-family: 'Inter';
     fill: #fff;
-    
 }
 
 .health-graph .y-labels {
@@ -194,15 +323,16 @@ a {
     fill: gray;
 }
 
-.health-graph-dot,.health-graph-dot-yellow,
+.health-graph-dot,
+.health-graph-dot-yellow,
 .health-graph-start-dot {
-    fill: #8FE9D0;
+    fill: #8fe9d0;
     stroke-width: 0.05;
-    
+
     stroke: white;
 }
-.health-graph-dot-yellow{
-  fill:#FFCC21 ;
+.health-graph-dot-yellow {
+    fill: #ffcc21;
 }
 .app-icon {
     display: inline !important;

@@ -10,7 +10,8 @@ const Home = () => {
         <>
             {/* HEADER */}
             <SiteHeader />
-
+            
+            
             {/* ACHIEVEMENT RATE */}
             <SectionAchievementRate />
 

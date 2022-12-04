@@ -9,18 +9,20 @@ import { CSSProperties } from 'react';
 const SectionAchievementRate = () => {
 
     return (
-        <div className="achievement-board">
-            <div className="content">
-                <div className="rate" >
+        <div style={{ paddingTop:64}}>
+            <div className="achievement-board">
+                <div className="content">
+                    <div className="rate" >
 
-                    <CirleProgressBar percentage={75} />
+                        <CirleProgressBar percentage={75} />
 
-                </div>
-                <div className="graph">
-                <LineChart />
-                </div>
+                    </div>
+                    <div className="graph">
+                        <LineChart />
+                    </div>
+                </div >
             </div >
-        </div >
+        </div>
     )
 }
 
