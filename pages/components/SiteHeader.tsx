@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import Icon from "./Icon"
+import Icon from "./Icon";
+
+import Image from "next/image";
 
 const LIST = [
     { code: 'MY-RECORD', icon: 'note', title: '自分の記録', size: 26 },
@@ -94,7 +96,8 @@ const SiteHeader = () => {
         <div className="site-header">
             <div ref={myRef} className="container flex" style={{ position: 'relative' }}>
                 <div className="LOGO">
-                    <img src="/logo.png" onClick={_onScrollTop} alt="Health logo" />
+                    
+                    <Image src="/logo.png" width={100} height={50} onClick={_onScrollTop} alt="Health logo" />
                 </div>
                 <div className="NAV" >
                     {

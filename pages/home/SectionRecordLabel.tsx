@@ -1,13 +1,16 @@
 
+import { useEffect, useState } from "react";
+
+import { useWindowSize } from 'usehooks-ts'
+
 import LineChart from "components/LineChart"
 import SquareRecord from "components/SqareRecord"
-import useWindowDimensions from "pages/hooks/useWindowDimension"
-import { useEffect, useState } from "react";
+
 
 
 const SectionRecordLabel = () => {
 
-    const handleScreen = useWindowDimensions();
+    const { width } = useWindowSize()
 
     const [localStyle, setStyle] = useState({
         marginLeft: -50,
@@ -16,13 +19,11 @@ const SectionRecordLabel = () => {
 
     useEffect(() => {
 
-        if (handleScreen) {
-            setStyle({
-                marginLeft: handleScreen?.width > 768 ? -50 : -10,
-                columnWidth: handleScreen?.width > 768 ? 90 : 34
-            })
-        }
-    }, [handleScreen?.width])
+        setStyle({
+            marginLeft: width > 768 ? -50 : -10,
+            columnWidth: width > 768 ? 90 : 34
+        })
+    }, [width])
 
 
 

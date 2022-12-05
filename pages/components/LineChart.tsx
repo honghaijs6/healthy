@@ -193,12 +193,12 @@ const LineChart: React.FC<LineChartProps> = ({ onLineClick = (line: string) => {
                 <polyline onClick={() => onLineClick('line_1')} className="line-1" fill="url(#grad)" stroke="#8FE9D0" strokeWidth={3} points={bodyWeighLine} />
                 <g onClick={() => onLineClick('line_1')}>
                     {
-                        BODY_WEIGHT_2.map((item) => {
+                        BODY_WEIGHT_2.map((item, index) => {
                             return item.value
                         }).map((dot, index) => {
                             const cx = (index + 1) * COLUMN_WIDTH;
                             return (
-                                <circle className="health-graph-dot" cx={cx} cy={dot} r={5} />
+                                <circle key={index} className="health-graph-dot" cx={cx} cy={dot} r={5} />
                             )
                         })
                     }
@@ -208,12 +208,12 @@ const LineChart: React.FC<LineChartProps> = ({ onLineClick = (line: string) => {
                 <polyline onClick={() => onLineClick('line_2')} className="line-2" fill="url(#grad)" stroke="#FFCC21" strokeWidth={3} points={bodyFatLine} />
                 <g onClick={() => onLineClick('line_2')}>
                     {
-                        BODY_FAT_2.map((item) => {
+                        BODY_FAT_2.map((item, index) => {
                             return item.value
                         }).map((dot, index) => {
                             const cx = (index + 1) * COLUMN_WIDTH;
                             return (
-                                <circle className="health-graph-dot-yellow" cx={cx} cy={dot} r={5} />
+                                <circle key={index} className="health-graph-dot-yellow" cx={cx} cy={dot} r={5} />
                             )
                         })
                     }

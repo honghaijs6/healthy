@@ -1,6 +1,8 @@
 import CirleProgressBar from "components/CircleProgressBar"
 import LineChart from "components/LineChart";
-import useWindowDimensions from "pages/hooks/useWindowDimension";
+
+import { useWindowSize } from 'usehooks-ts'
+
 
 import { CSSProperties, useEffect, useState } from 'react';
 
@@ -17,25 +19,24 @@ const SectionAchievementRate = () => {
 
         percentafe: 75
     });
-    const handleResize = useWindowDimensions();
+
+    const { width } = useWindowSize()
+
 
     useEffect(() => {
 
-        if (handleResize) {
+        setStyle((prev) => {
+            return {
+                ...prev,
+                height: width > 768 ? 301 : 330,
+                marginTop: width > 768 ? -10 : 0,
+                marginLeft: width > 768 ? 20 : -25,
+                columnWidth: width > 768 ? 50 : 38
+            }
+        });
 
-            // MOBILE SIZE
-            setStyle((prev) => {
-                return {
-                    ...prev,
-                    height: handleResize?.width > 768 ? 301 : 330,
-                    marginTop: handleResize?.width > 768 ? -10 : 0,
-                    marginLeft: handleResize?.width > 768 ? 20 : -25,
-                    columnWidth: handleResize?.width > 768 ? 50 : 38
-                }
-            });
-        }
 
-    }, [handleResize?.width]);
+    }, [width]);
 
     const onGraphLineClick = (line: string) => {
         try {

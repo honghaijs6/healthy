@@ -1,2 +1,2 @@
 
-declare module 'chart-css-react'
+declare module 'usehooks-ts'

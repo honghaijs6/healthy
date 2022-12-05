@@ -1,14 +1,15 @@
 import Icon from "components/Icon"
-import useWindowDimensions from "pages/hooks/useWindowDimension"
+
+import { useWindowSize } from 'usehooks-ts'
 
 
 const ShapeFood = ({ iconName = 'knife', label = 'Dinner' }) => {
 
-    const handleResize = useWindowDimensions();
+    const { width } = useWindowSize()
 
     return (
         <div className="shape-food">
-            <Icon name={iconName} style={{ marginLeft: 10, position: 'absolute', marginTop: -15 }} size={handleResize && handleResize?.width > 768 ? 45 : 35} color="#fff" />
+            <Icon name={iconName} style={{ marginLeft: 10, position: 'absolute', marginTop: -15 }} size={width > 768 ? 45 : 35} color="#fff" />
             <label>
                 {label}
             </label>
