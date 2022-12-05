@@ -8,7 +8,6 @@ import { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
 import Image from "next/image";
 
-
 interface iNav {
     code: string;
     icon: string;
@@ -86,9 +85,10 @@ const SiteHeader = () => {
                         }
 
                         return (
-                            <a key={index} onClick={() => _navTo(item?.code)}>
+                            <a key={index} onClick={() => _navTo(item?.code)} style={{ position: "relative" }}>
                                 <Icon name={myIcon} size={item.size} />
                                 {item.title}
+                                { item.code === "NEWS" && <label style={{ position: "absolute", left:20,top:0, borderRadius: "50%", fontSize: 9, fontFamily: "Inter", color: "#fff", width: 16, height: 16, display: "flex", justifyContent: "center", alignItems: "center", background: "#EA6C00" }}>1</label>}
                             </a>
                         );
                     })}

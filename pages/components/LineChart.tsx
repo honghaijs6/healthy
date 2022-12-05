@@ -97,7 +97,7 @@ const LineChart: React.FC<LineChartProps> = ({
                 {/* BACKGROUND GRID */}
                 {type === "big" ? <rect x={COLUMN_WIDTH} width={`calc(100% - ${columnWidth}px)`} height="80%" fill="url(#big)" /> : <rect x={COLUMN_WIDTH} width={`calc(100% - ${columnWidth}px)`} height="80%" fill="url(#small)" />}
 
-                <g className="y-labels">
+                <g className="y-labels hide">
                     {Array.from(Array(6)).map((_, index) => {
                         const value = MAX_VALUE - index * 50;
                         const y = index * 50 + 5;
