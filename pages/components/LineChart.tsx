@@ -90,7 +90,7 @@ const LineChart: React.FC<LineChartProps> = ({
             <svg style={{ marginLeft: -50, ...svgStyle }} version="1.2" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" className="health-graph">
                 <defs>
                     <pattern id={type} width={columnWidth} height={columnWidth} patternUnits="userSpaceOnUse">
-                        <path d="M 0 0 L 0 0 0 50" fill="none" stroke="#e5e5e5" stroke-width="1"></path>
+                        <path d="M 0 0 M 0 0 0 100" fill="none" stroke="#e5e5e5" stroke-width="1"></path>
                     </pattern>
                 </defs>
 
