@@ -16,8 +16,9 @@ const SectionAchievementRate = () => {
         marginLeft: 0,
         columnWidth: 50,
 
-        percentage: 0,
-        date: ""
+        percentage: 65,
+        date: "",
+        colorType: "#fff" // BODY WEIGHT = 37403E :GREEN - BODY FAT : YELLOW
     });
 
     const { width } = useWindowSize();
@@ -40,7 +41,8 @@ const SectionAchievementRate = () => {
                 return {
                     ...prev,
                     percentage: data ? data.value : 0,
-                    date: data ? (data.month > 9 ? data.month : "0" + String(data.month)) + "/" + String(data.year).slice(2) : ""
+                    date: data ? (data.month > 9 ? data.month : "0" + String(data.month)) + "/" + String(data.year).slice(2) : "",
+                    colorType: line === "DATA_FAT" ? "#FFCC21" : "#8FE9D0"
                 };
             });
         } catch {}
@@ -52,7 +54,7 @@ const SectionAchievementRate = () => {
             <div className="achievement-board">
                 <div className="content">
                     <div className="rate">
-                        <CirleProgressBar percentage={localState.percentage} title={localState.date} />
+                        <CirleProgressBar color={localState.colorType} percentage={localState.percentage} title={localState.date} />
                     </div>
                     <div className="graph">
                         <LineChart

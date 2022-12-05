@@ -118,7 +118,7 @@ const LineChart: React.FC<LineChartProps> = ({
                         const percentage = ((MAX_VALUE - item.value) * 100) / MAX_VALUE;
                         const data = { ...item, value: percentage };
 
-                        return <circle key={index} className="health-graph-dot" onMouseLeave={() => onlineLineTouch("DATA_WEIGHT", null)} onMouseOver={() => onlineLineTouch("DATA_WEIGHT", data)} cx={cx} cy={item.value} r={5} />;
+                        return <circle key={index} className="health-graph-dot" onMouseOver={() => onlineLineTouch("DATA_WEIGHT", data)} cx={cx} cy={item.value} r={5} />;
                     })}
                 </g>
 
@@ -130,7 +130,7 @@ const LineChart: React.FC<LineChartProps> = ({
                         const percentage = ((MAX_VALUE - item.value) * 100) / MAX_VALUE;
                         const data = { ...item, value: percentage };
 
-                        return <circle key={index} className="health-graph-dot-yellow" onMouseLeave={() => onlineLineTouch("DATA_FAT", null)} onMouseOver={() => onlineLineTouch("DATA_FAT", data)} cx={cx} cy={item.value} r={5} />;
+                        return <circle key={index} className="health-graph-dot-yellow"  onMouseOver={() => onlineLineTouch("DATA_FAT", data)} cx={cx} cy={item.value} r={5} />;
                     })}
                 </g>
 
