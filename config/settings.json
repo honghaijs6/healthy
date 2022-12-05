@@ -1,0 +1,74 @@
+{
+    "FOOTER_NAV": [
+        "会員登録",
+        "運営会社",
+        "利用規約",
+        "個人情報の取扱について",
+        "特定商取引法に基づく表記",
+        "お問い合わせ"
+    ],
+    "HEADER_NAV": [
+        {
+            "code": "MY-RECORD",
+            "icon": "note",
+            "title": "自分の記録",
+            "size": 26
+        },
+        {
+            "code": "MY-EXERCISE",
+            "icon": "challenge",
+            "title": "体重グラフ",
+            "size": 32
+        },
+        {
+            "code": "NEWS",
+            "icon": "info",
+            "title": "目標",
+            "size": 32
+        },
+        {
+            "code": "選択中のコース",
+            "icon": "info",
+            "title": "選択中のコース",
+            "size": 32
+        },
+        {
+            "code": "コラム一覧",
+            "icon": "info",
+            "title": "コラム一覧",
+            "size": 32
+        },
+        {
+            "code": "設定",
+            "icon": "info",
+            "title": "設定",
+            "size": 32
+        }
+    ],
+    "HEADER_NAV_SHORT": [
+        {
+            "code": "MY-RECORD",
+            "icon": "note",
+            "title": "自分の記録",
+            "size": 26
+        },
+        {
+            "code": "MY-EXERCISE",
+            "icon": "challenge",
+            "title": "チャレンジ",
+            "size": 32
+        },
+        {
+            "code": "NEWS",
+            "icon": "info",
+            "title": "お知らせ",
+            "size": 32
+        },
+        {
+            "code": "menu",
+            "icon": "menu",
+            "title": "",
+            "size": 32
+        }
+    ]
+}

@@ -104,6 +104,11 @@
 
 .health-graph .y-labels {
     text-anchor: end;
+    
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Inter';
+    fill: #fff;
 }
 
 .health-graph .health-graph-grid {
@@ -130,5 +135,16 @@
 .health-graph-dot-yellow {
     fill: #ffcc21;
 }
+
+.health-graph-dot:hover, .health-graph-dot-yellow:hover{
+    fill: #ea6c00 !important;
+}
+.line-1:hover{
+    stroke: var(--organge-dark)
+}
+.line-2:hover{
+    stroke: var(--organge-dark);
+}
+
 
 /************ END GRAPH *************/
